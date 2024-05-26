@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Onest";
-  src: url("../fonts/Onest-Semi-Bold.woff2") format("woff2");
-  font-weight: 600;
+  src: url("../fonts/Onest-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -35,6 +35,7 @@
   --background-primary: #ffffff;
   --background-secondary: #a7a3ff;
   --background-special: #f8f9fa;
+  --background-accent: #262626;
 
   --text-primary: #262626;
   --text-secondary: #ffffff;
@@ -79,13 +80,13 @@ button:focus-visible {
   font-size: 18px;
   line-height: 24px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--text-primary);
   background-color: var(--background-primary);
 }
 
 .page__main {
-  margin: 56px 0 0;
+  margin: 54px 0 0;
 }
 
 /*-----------------------------------------------*/
@@ -147,6 +148,7 @@ button:focus-visible {
 }
 
 .header__enter {
+  padding: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -173,14 +175,13 @@ button:focus-visible {
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 47px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .nav__item-link {
-  font-weight: 700;
   text-decoration: none;
   color: var(--text-primary);
   transition: 0.2s;
@@ -218,18 +219,22 @@ button:focus-visible {
 
 .catalog__header {
   display: grid;
-  padding: 0 22px;
+  padding: 0 18px 0 22px;
 }
 
 .catalog__title {
   margin: 10px 0 0;
   font-size: 40px;
-  font-weight: 700;
   line-height: 48px;
+  word-break: break-all;
 }
 
 .catalog__category {
   grid-row: 1;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .catalog__status {
@@ -253,10 +258,10 @@ button:focus-visible {
   padding: 12px 32px;
   font-family: "Onest", "Arial", sans-serif;
   font-size: 16px;
-  font-weight: 700;
   line-height: 24px;
+  letter-spacing: 0.03em;
   color: var(--text-secondary);
-  background-color: var(--background-secondary);
+  background-color: var(--background-accent);
   border: none;
   border-radius: 40px;
   cursor: pointer;
@@ -271,17 +276,25 @@ button:focus-visible {
 
 .catalog__add:active {
   color: var(--text-secondary);
-  background-color: var(--background-secondary);
+  background-color: var(--background-accent);
   outline: none;
 }
 
 .catalog__info-item {
-  padding: 12px 32px;
+  padding: 12px 16px;
   font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
+  font-weight: 400;
   background-color: var(--background-special);
-  border-radius: 40px;
+  border-radius: 16px;
+}
+
+.catalog__info-item:not(:first-of-type) {
+  display: none;
+}
+
+.catalog__info-text {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
 }
 
 .catalog__social {
@@ -289,7 +302,7 @@ button:focus-visible {
 }
 
 .catalog__menu {
-  margin: 48px 0 0;
+  margin: 23px 0 0;
   padding: 0 22px;
   display: flex;
   justify-content: start;
@@ -331,7 +344,7 @@ button:focus-visible {
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
-  gap: 25px;
+  gap: 16px 25px;
   padding: 0 30px;
 }
 
@@ -339,8 +352,8 @@ button:focus-visible {
   display: block;
   padding: 12px 32px;
   font-size: 16px;
-  font-weight: 700;
   line-height: 24px;
+  letter-spacing: 0.02em;
   background-color: var(--background-special);
   border-radius: 40px;
   cursor: pointer;
@@ -358,12 +371,12 @@ button:focus-visible {
 }
 
 .gallery__list {
-  margin: 40px 0 0;
-  padding: 0 49px;
+  margin: 33px 0 0;
+  padding: 0 74px 0 49px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px 45px;
+  gap: 31px 45px;
 }
 
 /*-----------------------------------------------*/
@@ -372,6 +385,7 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   width: 301px;
+  min-height: 408px;
   background-color: var(--background-primary);
   border-radius: 32px;
   box-shadow: 4px 4px 12px 0 rgba(59, 67, 87, 0.07);
@@ -403,14 +417,13 @@ button:focus-visible {
 .card__title {
   margin: 0;
   font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
 }
 
 .card__category {
   margin: 8px 0 0;
   font-family: "Inter", "Arial", sans-serif;
   font-size: 14px;
+  font-weight: 400;
   line-height: 20px;
 }
 
@@ -418,8 +431,9 @@ button:focus-visible {
   flex: 1 1 auto;
   display: flex;
   align-items: end;
-  gap: 23px;
+  gap: 30px;
   margin: 15px 0 0;
+  padding-left: 1px;
 }
 
 .card__likes {
@@ -471,7 +485,6 @@ button:focus-visible {
     padding: 12px 32px;
     font-family: "Onest", "Arial", sans-serif;
     font-size: 16px;
-    font-weight: 700;
     line-height: 24px;
     background-color: var(--background-primary);
     outline: 2px solid var(--text-primary);
@@ -503,6 +516,10 @@ button:focus-visible {
 
   .catalog__status {
     border-bottom: 1px solid var(--border-primary);
+  }
+
+  .catalog__info-item:not(:first-of-type) {
+    display: block;
   }
 
   .catalog__social {
@@ -552,6 +569,7 @@ button:focus-visible {
   }
 
   .catalog__menu {
+    margin-top: 48px;
     padding: 0;
   }
 
@@ -560,7 +578,9 @@ button:focus-visible {
   }
 
   .gallery__list {
+    margin-top: 40px;
     margin-right: -40px;
     padding: 0;
+    gap: 40px 45px;
   }
 }

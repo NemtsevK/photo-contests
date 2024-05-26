@@ -1,7 +1,6 @@
 CREATE
   DATABASE test_db DEFAULT CHARACTER SET 'utf8' DEFAULT COLLATE 'utf8_general_ci';
 
-
 CREATE TABLE categories
 (
   id   INT AUTO_INCREMENT PRIMARY KEY,
