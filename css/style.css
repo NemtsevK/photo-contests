@@ -360,14 +360,18 @@ button:focus-visible {
 .gallery__list {
   margin: 40px 0 0;
   padding: 0 49px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px 45px;
 }
 
 /*-----------------------------------------------*/
 .card {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   width: 301px;
-  min-height: 408px;
   background-color: var(--background-primary);
   border-radius: 32px;
   box-shadow: 4px 4px 12px 0 rgba(59, 67, 87, 0.07);
@@ -384,6 +388,8 @@ button:focus-visible {
 }
 
 .card__image {
+  width: 100%;
+  object-fit: cover;
   border-radius: 32px;
 }
 
@@ -413,16 +419,17 @@ button:focus-visible {
   display: flex;
   align-items: end;
   gap: 23px;
+  margin: 15px 0 0;
 }
 
-.card__like {
+.card__likes {
   display: flex;
   align-items: center;
   gap: 8px;
   color: var(--text-accent);
 }
 
-.card__like::before {
+.card__likes::before {
   content: "";
   width: 19px;
   height: 19px;
@@ -456,6 +463,7 @@ button:focus-visible {
 
   .header__container {
     grid-template-columns: auto 1fr auto;
+    padding: 0;
   }
 
   .header__create {
@@ -552,6 +560,7 @@ button:focus-visible {
   }
 
   .gallery__list {
+    margin-right: -40px;
     padding: 0;
   }
 }

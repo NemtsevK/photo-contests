@@ -66,36 +66,37 @@
         </div>
       </div>
       <div class="catalog__gallery gallery">
-        <div class="gallery__filter-list">
-          <label class="gallery__filter-item gallery__filter-item--active">
-            <input class="gallery__filter-checkbox visually-hidden" type="checkbox" name="filter" value="10" checked>
-            <span class="gallery__filter-text">Участники 10-12 лет (4)</span>
-          </label>
-          <label class="gallery__filter-item">
-            <input class="gallery__filter-checkbox visually-hidden" type="checkbox" name="filter" value="13">
-            <span class="gallery__filter-text">Участники 13-15 лет (11)</span>
-          </label>
-          <label class="gallery__filter-item">
-            <input class="gallery__filter-checkbox visually-hidden" type="checkbox" name="filter" value="16">
-            <span class="gallery__filter-text">Участники 16-18 лет (3)</span>
-          </label>
-        </div>
-        <div class="gallery__list">
-          <div class="gallery__card card">
-            <img class="card__image" src="images/content/gallery.png" width="301" height="200" alt="">
-            <div class="card__content">
-              <h2 class="card__title">Я узнал что у меня есть огромная семья, есть и реч...</h2>
-              <div class="card__category">Участники 13-15 лет</div>
-              <div class="card__footer">
-                <div class="card__like">158</div>
-                <div class="card__comments">11</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="gallery__filter-list"></div>
+        <div class="gallery__list"></div>
       </div>
     </section>
   </div>
 </main>
+
+<template id="filter">
+  <label class="gallery__filter-item gallery__filter-item--active">
+    <input class="gallery__filter-checkbox visually-hidden" type="checkbox" name="filter" value="10" checked>
+    <span class="gallery__filter-text">
+      <span class="gallery__filter-name">Участники 10-12 лет</span>
+      <span class="gallery__filter-count">(4)</span>
+    </span>
+  </label>
+</template>
+
+<template id="card">
+  <div class="gallery__card card">
+    <img class="card__image" src="images/content/gallery.png" width="301" height="200" alt="">
+    <div class="card__content">
+      <h2 class="card__title">Я узнал что у меня есть огромная семья, есть и реч...</h2>
+      <div class="card__category">Участники 13-15 лет</div>
+      <div class="card__footer">
+        <div class="card__likes">158</div>
+        <div class="card__comments">11</div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script src="js/main.js"></script>
 </body>
 </html>
