@@ -375,13 +375,12 @@ button:focus-visible {
   padding: 0 74px 0 49px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
   gap: 31px 45px;
 }
 
 /*-----------------------------------------------*/
 .card {
-  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   width: 301px;
@@ -547,6 +546,14 @@ button:focus-visible {
 
   .catalog__social-link:hover::before {
     background-color: var(--text-special);
+  }
+
+  .catalog__social-link:active {
+    border-color: var(--text-primary);
+  }
+
+  .catalog__social-link:active::before {
+    background-color: var(--text-primary);
   }
 
   .catalog__social-link::before {
