@@ -1,28 +1,28 @@
 CREATE
   DATABASE test_db DEFAULT CHARACTER SET 'utf8' DEFAULT COLLATE 'utf8_general_ci';
 
-CREATE TABLE categories
+CREATE TABLE phc_categories
 (
   id   INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255)
 );
 
-CREATE TABLE works
+CREATE TABLE phc_works
 (
   id       INT AUTO_INCREMENT PRIMARY KEY,
   name     VARCHAR(255),
   likes    INT,
   comments INT,
   category INT,
-  CONSTRAINT fk_works_category FOREIGN KEY (category) REFERENCES categories (id)
+  CONSTRAINT fk_phc_works_category FOREIGN KEY (category) REFERENCES phc_categories (id)
 );
 
-INSERT INTO categories (name)
+INSERT INTO phc_categories (name)
 VALUES ('Участники 10-12 лет'),
        ('Участники 13-15 лет'),
        ('Участники 16-18 лет');
 
-INSERT INTO works (name, likes, comments, category)
+INSERT INTO phc_works (name, likes, comments, category)
 VALUES ('Я узнал, что у меня есть огромная семья', 160, 30, 1),
        ('Сказка зимнего леса', 110, 20, 2),
        ('Лесная прогулка с зайцем', 50, 15, 1),
