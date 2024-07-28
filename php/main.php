@@ -24,6 +24,7 @@ if ($result_categories->num_rows > 0) {
 }
 
 $query_works = 'SELECT phc_works.name AS name
+    ,image
     ,likes
     ,comments
     ,phc_categories.name AS category

@@ -20,8 +20,9 @@ const setFiltersContainer = (categories) => {
   filtersContainer.appendChild(filtersFragment);
 }
 
-const createCardElement = ({ name, category, likes, comments }) => {
+const createCardElement = ({ name, image, category, likes, comments }) => {
   const cardElement = cardItemTemplate.cloneNode(true);
+  cardElement.querySelector('.card__image').src = `images/content/${image}`;
   cardElement.querySelector('.card__title').textContent = name;
   cardElement.querySelector('.card__category').textContent = category;
   cardElement.querySelector('.card__likes').textContent = likes;
